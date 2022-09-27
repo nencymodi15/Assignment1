@@ -7,17 +7,16 @@ using System.Web.Http;
 
 namespace Assignment1.Controllers
 {
-    public class AddTenController : ApiController
+    public class GreetingToController : ApiController
     {
         /// <summary>
-        /// In this code whatever value will be inputed it will be added with ten 
-        /// and then it will be displayed in the screen.
+        /// In this number entered by User it will be displayed as Hello to {idvalue} people. 
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public int Get(int id)
+        public String Get(int id)
         {
-            return id + 10;
+            return "Hello To " + id + " People!";
         }
     }
 }

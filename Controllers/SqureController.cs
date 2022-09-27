@@ -7,17 +7,17 @@ using System.Web.Http;
 
 namespace Assignment1.Controllers
 {
-    public class AddTenController : ApiController
+    public class SqureController : ApiController
     {
         /// <summary>
-        /// In this code whatever value will be inputed it will be added with ten 
-        /// and then it will be displayed in the screen.
+        /// In this User will input a number in url and the number will be multiplyed by
+        /// it self to give Squre od that Number
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public int Get(int id)
         {
-            return id + 10;
+            return id * id;
         }
     }
 }
