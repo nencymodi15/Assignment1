@@ -29,20 +29,27 @@ namespace Assignment1.Controllers
             double total;
             double TotalPrice;
             double taxPrice;
-            
+            String msg1 ="1 fortnights at $";
+            string msg2 = "/FN = $";
+            string msg3 = "CAD, HST 13 % =";
+            string msg4 = "CAD, Total = $";
+            string msg5 = "CAD, Total = $";
+
+
             int mod = id / fortnight;
             if(mod == 0)
             {
                 mod = 1;
+                total = fortnitePrice * mod;
             }
             else
             {
                 mod = mod + 1;
+                total = fortnitePrice * mod;
             }
-            total = fortnitePrice * mod;
             taxPrice = total * (Taxes / 100);
             TotalPrice = total + taxPrice;
-            return "“1 fortnights at $" + fortnitePrice + "/FN = $" + total + "CAD, HST 13 % =" + taxPrice + "CAD, Total = $" + TotalPrice + "CAD" ;
+            return  msg1 + fortnitePrice + msg2  + total +  msg3 + taxPrice + msg4 + TotalPrice + msg5;
         }
     }
 }
